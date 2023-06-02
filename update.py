@@ -59,4 +59,4 @@ if UPSTREAM_REPO:
         log_info('Successfully updated with latest commit from UPSTREAM_REPO')
     else:
         log_error(
-            'Something went wrong while updating, check UPSTREAM_REPO if valid or not!')
+            'Something went wrong while updating, check UPSTREAM_REPO if valid or not!.')
