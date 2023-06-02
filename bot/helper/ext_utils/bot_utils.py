@@ -146,10 +146,6 @@ def get_readable_message():
             msg += f"\n<b>├ </b>{download.processed_bytes()} of {download.size()}"
             msg += f"\n<b>├ Speed</b>: {download.speed()}"
             msg += f'\n<b>├ Estimated</b>: {download.eta()}'
-            msg += f"\n<b>• CPU</b>: {cpu_percent()}%"
-            msg += f"\n<b>• RAM</b>: {virtual_memory().percent}%"
-            msg += f"\n<b>• FREE</b>: {get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
-            msg += f"\n<b>• UPTIME</b>: {get_readable_time(time() - botStartTime)}"
             if hasattr(download, 'seeders_num'):
                 try:
                     msg += f"\n<b>├ Seeders</b>: {download.seeders_num()} | <b>Leechers</b>: {download.leechers_num()}"
@@ -196,6 +192,9 @@ def get_readable_message():
         buttons.ibutton("Next", "status nex")
         button = buttons.build_menu(3)
     msg += f"<b>• Tasks running</b>: {tasks}"
+    msg += f"\n<b>• CPU</b>: {cpu_percent()}%"
+    msg += f"\n<b>• RAM</b>: {virtual_memory().percent}%"
+    msg += f"\n<b>• UPTIME</b>: {get_readable_time(time() - botStartTime)}"
     msg += f"\n<b>• Free disk space</b>: {get_readable_file_size(disk_usage(config_dict['DOWNLOAD_DIR']).free)}"
     msg += f"\n<b>• Uploading speed</b>: {get_readable_file_size(up_speed)}/s"
     msg += f"\n<b>• Downloading speed</b>: {get_readable_file_size(dl_speed)}/s"
