@@ -1,4 +1,4 @@
-FROM luffy01/letmedown1:latest
+FROM 5hojib/luna:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
