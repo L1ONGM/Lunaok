@@ -7,3 +7,4 @@ COPY . .
 
 CMD ["bash", "start.sh"]
 
+#xd
